@@ -22,6 +22,12 @@ function BmiCalculator({ weight, setWeight, setCalculatedBmi, unit, setUnit, set
         }
     };
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            calculateBMI();
+        }
+    };
+
     return (
         <div className={styles.bmiCalculator}>
             <h2 className={styles.calculatorTitle}>BMI Calculator</h2>
@@ -31,7 +37,8 @@ function BmiCalculator({ weight, setWeight, setCalculatedBmi, unit, setUnit, set
                         type="radio" 
                         value="metric" 
                         checked={unit === 'metric'} 
-                        onChange={() => setUnit('metric')} 
+                        onChange={() => setUnit('metric')}
+                        onKeyDown={handleKeyDown}
                     />
                     Metric
                 </label>
@@ -41,6 +48,7 @@ function BmiCalculator({ weight, setWeight, setCalculatedBmi, unit, setUnit, set
                         value="imperial" 
                         checked={unit === 'imperial'} 
                         onChange={() => setUnit('imperial')} 
+                        onKeyDown={handleKeyDown}
                     />
                     Imperial
                 </label>
@@ -51,10 +59,10 @@ function BmiCalculator({ weight, setWeight, setCalculatedBmi, unit, setUnit, set
                     type="number" 
                     className={styles.weightInput}
                     value={weight} 
-                    onChange={(e) => setWeight(e.target.value)} 
+                    onChange={(e) => setWeight(e.target.value)}
+                    onKeyDown={handleKeyDown}
                 />
             </div>
-
             <div className={styles.inputGroup}>
                 <label className={styles.heightLabel}>
                     Height ({unit === 'metric' ? 'cm' : 'feet/inches'}): 
@@ -68,6 +76,7 @@ function BmiCalculator({ weight, setWeight, setCalculatedBmi, unit, setUnit, set
                             setHeight(e.target.value);
                             setDisplayHeight(e.target.value + ' cm');
                         }} 
+                        onKeyDown={handleKeyDown}
                     />
                 ) : (
                     <div className={styles.imperialInputs}>
@@ -80,6 +89,7 @@ function BmiCalculator({ weight, setWeight, setCalculatedBmi, unit, setUnit, set
                                 setFeet(e.target.value);
                                 setDisplayHeight(e.target.value + ' feet ' + inches + ' inches');
                             }} 
+                            onKeyDown={handleKeyDown}
                         />
                         <input 
                             type="number" 
@@ -90,14 +100,15 @@ function BmiCalculator({ weight, setWeight, setCalculatedBmi, unit, setUnit, set
                                 setInches(e.target.value);
                                 setDisplayHeight(feet + ' feet ' + e.target.value + ' inches');
                             }} 
+                            onKeyDown={handleKeyDown}
                         />
                     </div>
                 )}
             </div>
-
+    
             <button className={styles.calculateButton} onClick={calculateBMI}>Calculate</button>
         </div>
     );
-}
+}    
 
 export default BmiCalculator;
