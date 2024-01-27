@@ -1,0 +1,85 @@
+.bmiInfoPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 60rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+ul {
+    font-size: 1.5rem;
+    width: 30%;
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+li::before {
+    content: '';
+    display: inline-block;
+    width: 2.5rem; 
+    height: 2.5rem; 
+    background-image: url(../public/icons/weight.svg);
+    background-size: cover;
+    margin-right: 0.5rem;
+}
+
+strong {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    margin-right: 1rem;
+}
+
+.underweight { 
+    color: #7ec0ee; 
+}
+
+.normal {
+     color: #008000; 
+}
+
+.overweight {
+     color: #ffa500; 
+}
+
+.obesity {
+     color: #ff0000; 
+}
+
+.conclusion {
+    margin-bottom: 1rem;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 1.3rem;
+    padding: 0.5rem 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}

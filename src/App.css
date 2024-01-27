@@ -1,38 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Open+Sans:wght@400;500;600&family=Press+Start+2P&display=swap');
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+  background-color: #f7f7f7; 
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;     
 }
 
-.App-link {
-  color: #61dafb;
+
+.light-mode {
+  background-color: #f7f7f7;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode {
+  background-color: black;
+  color: #f7f7f7;
+}
+
+.mode-toggle-button {
+  align-self: flex-end;
+  padding: .7rem;
+  margin: 2rem;
+}
+
+.summary-section {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.summary-text, .summary-detail, .summary-result {
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+.summary-text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-detail {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.summary-result {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.link {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #007bff;
+  text-decoration: none;
 }
