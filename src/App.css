@@ -3,7 +3,7 @@
 html {
   font-size: 62.5%; /* 1rem = 10px */
   box-sizing: border-box;
-  background-color: #f7f7f7; 
+  background-color: #FAF7F0; 
 }
 
 *, *::before, *::after {
@@ -20,7 +20,7 @@ html {
 
 
 .light-mode {
-  background-color: #f7f7f7;
+  background-color: FAF7F0;
   color: black;
 }
 

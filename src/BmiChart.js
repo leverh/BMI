@@ -28,15 +28,15 @@ function BmiChart({ userBmi }) {
             {
                 label: 'Category Range',
                 data: [range[1]], // Max value of the range
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: '#C47AFF',
+                borderColor: '#C47AFF',
                 borderWidth: 1
             },
             {
                 label: 'Your BMI',
                 data: [userBmiValue],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: '#EB6440',
+                borderColor: '#EB6440',
                 borderWidth: 1
             }
         ]
